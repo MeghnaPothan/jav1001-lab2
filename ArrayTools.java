@@ -1,3 +1,4 @@
+//Athul Babu
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -21,6 +22,7 @@ public class ArrayTools {
         System.out.println("The Average is : " + arrayAvg(arr));
 
         Scanner scanner_three = new Scanner(System.in);  
+       
         System.out.println("Enter a value to search for ");
        int searchValue = scanner_three.nextInt();
        if(arraySearch(arr,searchValue)){
@@ -29,6 +31,7 @@ public class ArrayTools {
         System.out.println("The array do not contains "+searchValue);
        }
        System.out.println("The array reversed is "+Arrays.toString(arrayReverse(arr)));
+       
    }
 
  
