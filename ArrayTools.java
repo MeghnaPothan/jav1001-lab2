@@ -30,9 +30,12 @@ public class ArrayTools {
        
         System.out.println("Enter a value to search for ");
        int searchValue = scanner_three.nextInt();
-       if(arraySearch(arr,searchValue)){  // calling array search function
-           System.out.println("The array contains "+searchValue);
-       }else{
+       if(arraySearch(arr,searchValue)) // calling array search function
+       {  
+           System.out.println("This array contains "+searchValue);
+       }
+       else
+       {
         System.out.println("The array do not contains "+searchValue);
        }
        System.out.println("The array reversed is "+Arrays.toString(arrayReverse(arr))); // Calling array reverse function
@@ -40,18 +43,22 @@ public class ArrayTools {
    }
 
  
-    private static int[] arrayReverse(int[] arr) {
-int[] result = new int[arr.length];
-int j = arr.length;
-for (int i = 0; i < arr.length; i++) {
+    private static int[] arrayReverse(int[] arr) // finds the reverse of an array 
+    {
+
+    int[] result = new int[arr.length];
+    int j = arr.length;
+    for (int i = 0; i < arr.length; i++)
+      {
     result[j - 1] = arr[i];
     j = j - 1;
 }
         return result;
-    }
+      }
 
 
-    private static boolean arraySearch(int[] arr, int searchValue) {
+    private static boolean arraySearch(int[] arr, int searchValue) // search for an element in an array
+    {
         boolean result=false;
         for(int i=0;i<arr.length;i++){
    
@@ -68,7 +75,7 @@ if(searchValue==arr[i]){
     }
 
 
-    public static String Caesar_cipher(String message, int shiftValue) 
+    public static String Caesar_cipher(String message, int shiftValue) // this functions takes in a string and returns a encrypted tring with a shift value   
     { String alphabet = "abcdefghijklmnopqrstuvwxyz";
         message = message.toLowerCase();
         String cipherText = "";
@@ -86,7 +93,7 @@ if(searchValue==arr[i]){
     }
 
 
-    public static double arrayAvg(int[] inputArray)
+    public static double arrayAvg(int[] inputArray) // finds the average of an array
      {
        
         double sum=0; 
